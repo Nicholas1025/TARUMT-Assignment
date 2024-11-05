@@ -1,0 +1,105 @@
+<?php
+date_default_timezone_set("Asia/Kuala_Lumpur");
+
+?>
+<!DOCTYPE html>
+
+<html>
+    <title>Eating Madness Society</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url("");
+            min-height: 100%;
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+    </style>
+    <body>
+
+
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card" id="myNavbar">
+                <span class="w3-bar-item w3-large ">Garlic Pepper Beef</span>
+
+
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small">
+                    <a href="welcome.php" class="w3-bar-item w3-button">HOME</a>
+                    <a href="listParticipant.php" class="w3-bar-item w3-button"> LIST PARTICIPANT</a>
+                    <a href="add.php" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ADD EVENT</a>
+                    <a href="index.php" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> VIEW EVENT</a>
+                    <a href="booking.php" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> BOOKING</a>
+
+
+                </div>
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="profile" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4">
+                <header class="w3-container w3-teal w3-center w3-padding-32"> 
+                    <span onclick="document.getElementById('profile').style.display = 'none'" 
+                          class="w3-button w3-teal w3-xlarge w3-display-topright">X</span>
+                    <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Profile</h2>
+                </header>
+                <br>
+                <div class="w3-container">
+                    <img src="tienchuan.png" alt="" width="120" height=60">
+
+                    <center>  
+                        <br>
+                        <table  border='3' cellspacing='0' cellpadding='5' width='750'>
+                            <tr>
+                                <td  bgcolor='#CCCCCC'><strong>ID</strong></td>
+                                <td bgcolor='white'><strong><?php echo htmlspecialchars($_SESSION['email']); ?><strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td bgcolor='#CCCCCC'><strong>Name</strong></td>
+                                                <td bgcolor='white'><strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td bgcolor='#CCCCCC'><strong>Gender</strong></td>
+                                                <td bgcolor='white'><strong>male<strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td bgcolor='#CCCCCC'><strong>email</strong></td>
+                                                                <td bgcolor='white'><strong>abc123@gmail.com</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td bgcolor='#CCCCCC'><strong>AGE</strong></td>
+                                                                <td bgcolor='white'><strong>20</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td bgcolor='#CCCCCC'><strong>Time</strong></td>
+                                                                <td bgcolor='white'><strong><?php echo date('m-F-Y  g:i:s A');?></strong></td>
+                                                            </tr>
+                                                            </table>
+                                                            </center>
+                                                            <button class="w3-button w3-red w3-section" onclick="document.getElementById('profile').style.display = 'none'">Close <i class="fa fa-remove"></i></button>
+
+
+                                                            </div>
+                                                            </div>
+                                                            </div>
